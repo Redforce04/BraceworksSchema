@@ -1,0 +1,67 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CrossSectionEntity">
+    <xs:annotation>
+      <xs:documentation>
+ //  BraceWorxs Truss and Section Data
+ </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="SectionName">
+          <xs:annotation>
+            <xs:documentation>Information</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element type="xs:string" name="SectionManufactor"/>
+        <xs:element type="xs:string" name="DataOrigen"/>
+        <xs:element type="xs:string" name="TrussDesign">
+          <xs:annotation>
+            <xs:documentation>Section Properties</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element type="xs:string" name="TrussNorm"/>
+        <xs:element type="xs:string" name="BracingDesign"/>
+        <xs:element type="xs:float" name="Width_CM">
+          <xs:annotation>
+            <xs:documentation>Section Geometrical Properties</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element type="xs:float" name="Height_CM"/>
+        <xs:element type="xs:float" name="CrossAreaSection_CM2"/>
+        <xs:element type="xs:byte" name="RetangeleBracing_V_Grad"/>
+        <xs:element type="xs:byte" name="RetangeleBracing_H_Grad"/>
+        <xs:element type="xs:byte" name="DiameterChord_CM"/>
+        <xs:element type="xs:byte" name="WallThickness_CM"/>
+        <xs:element type="xs:float" name="Az_CM2">
+          <xs:annotation>
+            <xs:documentation> Statical Data</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element type="xs:float" name="Ay_CM2"/>
+        <xs:element type="xs:short" name="Ixx_CM4"/>
+        <xs:element type="xs:float" name="Iyy_CM4"/>
+        <xs:element type="xs:float" name="Izz_CM4"/>
+        <xs:element type="xs:byte" name="MaxNx_KN">
+          <xs:annotation>
+            <xs:documentation> Maximum Cut Reaktion</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element type="xs:float" name="MaxVy_KN"/>
+        <xs:element type="xs:float" name="MaxVz_KN"/>
+        <xs:element type="xs:byte" name="MaxMt_KNM"/>
+        <xs:element type="xs:byte" name="MaxMby_KNM"/>
+        <xs:element type="xs:byte" name="MaxMbz_KNM"/>
+        <xs:element type="xs:float" name="MaxForceChord_KN">
+          <xs:annotation>
+            <xs:documentation> Maximum Forces</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element type="xs:float" name="MaxForceConnector_KN"/>
+        <xs:element type="xs:float" name="MaxForceBracing_H_KN"/>
+        <xs:element type="xs:float" name="MaxForceBracing_V_KN"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Ident"/>
+      <xs:attribute type="xs:string" name="MaterialName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
